@@ -4,7 +4,7 @@ Automatically renames downloaded arxiv PDFs to their author + year + title
 
 ## Installation
 
-Clone this repository and install the required dependencies (`watchman` and `arxiv`).
+Clone this repository and install the required dependencies (`watchdog` and `arxiv`).
 ```bash
 git clone https://github.com/FlyOrBoom/arxiv-rename.git
 cd arxiv-rename
@@ -18,3 +18,7 @@ replacing `~/Downloads` with the path to the directory where your arxiv PDFs are
 ```python
 python3 main.py ~/Downloads
 ```
+
+## Configuration
+
+Go edit the code at `main.py` yourself!
