@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import os
 import time
@@ -8,7 +10,7 @@ import arxiv
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-regex = re.compile(r"^(\d{4}\.\d{5}v\d+).*\.pdf$")
+regex = re.compile(r"^(\d+\.\d+v\d+).*\.pdf$")
 client = arxiv.Client()
 
 class MyEventHandler(FileSystemEventHandler):
