@@ -12,8 +12,7 @@ regex = re.compile(r"^(\d{4}\.\d{5}v\d+).*\.pdf$")
 client = arxiv.Client()
 
 class MyEventHandler(FileSystemEventHandler):
-    def on_created(self, event):
-
+    def on_modified(self, event):
         if event.is_directory: return
 
         dirname = os.path.dirname(event.src_path)
