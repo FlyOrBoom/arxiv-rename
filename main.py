@@ -27,7 +27,7 @@ class MyEventHandler(FileSystemEventHandler):
         paper = next(client.results(arxiv.Search(id_list=[paper_id])))
 
         title = paper.title
-        updated = str(paper.updated)[:7]
+        updated = str(paper.updated)[:4]
         author = paper.authors[0].name
         if len(paper.authors) > 1: author += " et al"
         newname = f"{author} {updated} - {title}.pdf"
