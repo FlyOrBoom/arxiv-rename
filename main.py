@@ -30,7 +30,7 @@ class MyEventHandler(FileSystemEventHandler):
         updated = str(paper.updated)[:4]
         author = paper.authors[0].name
         if len(paper.authors) > 1: author += " et al"
-        newname = f"{author} {updated} - {title}.pdf"
+        newname = f"{author} {updated} - {title}.pdf".replace("/", "_")
 
         os.rename(event.src_path, os.path.join(dirname, newname))
         print(f"{paper_id} -> {newname}")
